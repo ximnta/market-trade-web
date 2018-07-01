@@ -36,7 +36,12 @@ angular.module('market-trade.graph-line', [])
       };
 
       this.updateChart = function () {
-
+        if(!ctrl.messagesMap[ctrl.selectedTrade]){
+          ctrl.labels = [];
+          ctrl.series = [];
+          ctrl.data = [];
+          return;
+        }
         ctrl.labels = ctrl.messagesMap[ctrl.selectedTrade].map(function (m) {
           return m.timePlaced;
         })
