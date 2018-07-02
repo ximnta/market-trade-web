@@ -15,12 +15,12 @@ angular.module('market-trade.graph-line', [])
         }        
         //Converting and sorting the dates
         var mList = ctrl.messages.map(function (m) {
-          m.timePlaced = new Date(m.timePlaced);
+          m.time = new Date(m.timePlaced);
           return m;
-        })
-
+        });
+        
         mList.sort(function (a, b) {
-          return a.timePlaced > b.timePlaced ? 1 : -1;
+          return a.time > b.time ? 1 : -1;
         })
 
         //Grouping by currencies
@@ -43,7 +43,7 @@ angular.module('market-trade.graph-line', [])
           return;
         }
         ctrl.labels = ctrl.messagesMap[ctrl.selectedTrade].map(function (m) {
-          return m.timePlaced;
+          return m.time;
         })
 
         ctrl.series = [ctrl.selectedTrade];

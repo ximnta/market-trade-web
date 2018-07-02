@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+}
+
+.logo{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
+}
+
+.padding-bottom{
+    padding-bottom: 1em;
+}
+
+.padding-top{
+    padding-top: 1em;
+}
+
+.table-pagination{
+    &__btn{
+        min-width: 50px;
+    }
+    &__text{
+        padding: 0 1em;
+    }
+}
+
+.filter-table{
+    padding-bottom: 2em;
+    
+    label{
+        min-width: 113px;
+    }
+
+}
+
+.main-container{
+    padding: 1em 0; 
+    background: #FFF; 
+    
+    &__tab{
+        padding-bottom: 2em; 
+        display: block;
+    } 
+}
+
+.graph{
+    &__title{
+        text-align: center;
+        padding: 1em 0;
+    }
+}
+

@@ -2,7 +2,7 @@ angular.module('market-trade.service', [])
     .service('tradeService', ['$http', function ($http) {
 
         var promiseCache;
-        var useCache = false;
+        var useCache = true;
 
         var getMessages = function () {
             if(!promiseCache || !useCache){

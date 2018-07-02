@@ -9,5 +9,7 @@ angular.module('market-trade.table', ['market-trade.service'])
             });
 
             this.titles = ['User id', 'Currency From', 'Currency To', 'Amount Sell', 'Amount Buy', 'Rate', 'Time Placed', 'Originating Country' ];
+            this.page = 1;
+            this.pageSize = 15;
         }]
     });
