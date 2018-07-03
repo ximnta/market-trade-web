@@ -14,7 +14,7 @@ $ npm start
 ```
 ## Build Production Distribution
 
-$ npm run build-pro
+$ npm run build-prod
 
 The app should be running on [localhost:5000](http://localhost:5000/).
 
