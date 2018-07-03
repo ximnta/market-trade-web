@@ -2,15 +2,15 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4">
             <label for="country">Country:</label>
-            <input type="text" name="country" ng-model="country">
+            <input type="text" name="country" ng-model="$ctrl.country" ng-change="$ctrl.filterMessages()">
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <label for="from">Currency From:</label>
-            <input type="text" name="from" ng-model="from">
+            <input type="text" name="from" ng-model="$ctrl.from" ng-change="$ctrl.filterMessages()">
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <label for="to">Currency To: </label>
-            <input type="text" name="to" ng-model="to">
+            <input type="text" name="to" ng-model="$ctrl.to" ng-change="$ctrl.filterMessages()">
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody class="text-center">
-            <tr ng-repeat="msg in $ctrl.messages | filter: {country: country, currencyFrom: from, currencyTo: to} | limitTo: $ctrl.pageSize:$ctrl.page*$ctrl.pageSize-$ctrl.pageSize">
+            <tr ng-repeat="msg in $ctrl.messages | limitTo: $ctrl.pageSize:$ctrl.page*$ctrl.pageSize-$ctrl.pageSize">
                 <td>{{ msg.userId }}</td>
                 <td>{{ msg.currencyFrom }}</td>
                 <td>{{ msg.currencyTo }}</td>
@@ -45,7 +45,7 @@
             <i class="fas fa-angle-double-left"></i>
         </button>
     </div>
-    <div class="table-pagination__text">Page {{$ctrl.page}} of {{$ctrl.messages.length / $ctrl.pageSize || 1}}</div>
+    <div class="table-pagination__text">Page {{$ctrl.page}} of {{$ctrl.totalPages}}</div>
     <div>
         <button ng-show="$ctrl.page*$ctrl.pageSize<$ctrl.messages.length"
                 ng-click="$ctrl.page=$ctrl.page+1"
