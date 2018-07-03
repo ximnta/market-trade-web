@@ -1,8 +1,0 @@
-exports = module.exports = require("../../node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.id, "body {\n  height: 100vh; }\n\n.filter-table {\n  padding-bottom: 2em; }\n\n.filter-table label {\n  min-width: 113px; }\n\n.logo {\n  text-align: center;\n  font-size: 2em;\n  padding-top: 1em; }\n\n.main-container {\n  padding: 1em 0;\n  background: #FFF; }\n\n.main-container__tab {\n  padding-bottom: 2em;\n  display: block; }\n\n.graph__title {\n  text-align: center;\n  padding: 1em 0; }\n\n.padding-bottom {\n  padding-bottom: 1em; }\n", ""]);
-
-// exports
