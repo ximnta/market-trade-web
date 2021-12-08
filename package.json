@@ -24,7 +24,7 @@
     "angular": "~1.7.2",
     "angular-chart.js": "~1.1.1",
     "angular-route": "~1.7.2",
-    "chart.js": "~2.7.2",
+    "chart.js": "~3.6.2",
     "css-loader": "~0.28.11",
     "lodash": "~4.17.10",
     "sass-loader": "~7.0.3"
